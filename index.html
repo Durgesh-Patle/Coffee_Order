@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="box" id="card">
+            <div class="img">
+                <img src="cup image.jpg" alt="">
+            </div>
+            <div class="details">
+                <p class="para1">COFFEE MUG</p>
+                <h1>White Coffee </h1>
+                <h1>Mug</h1>
+                <p class="para2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur ea perspiciatis magni
+                    necessitatibus est in cum perferendis totam nesciunt ducimus?</p>
+                <div class="price">
+                    <h1>$ 149</h1>
+                    <button id="btn" onclick="closecard()">
+                        <img src="delevery boy.png" alt="">
+                        Add to Card
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="submitted" id="submit" onclick="seePage()">
+            <img src="tick image.png" alt="">
+            <h1>Order Placed !!</h1>
+        </div>
+    </div>
+
+    <script>
+        let card = document.getElementById("card");
+        let btn=document.getElementById("btn");
+
+        btn.addEventListener("click",function closecard() {
+            card.style.display="none";
+
+            seePage();
+        })
+
+        function seePage(){
+            document.getElementById("submit").style.transform="scale(1)"
+        }
+    </script>
+</body>
+
+</html>
